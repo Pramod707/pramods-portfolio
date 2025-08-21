@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #0F0F23;
+  --color-foreground: #FFFFFF;
+
+  --color-card: #1A1A2E;
+  --color-card-foreground: #FFFFFF;
+
+  --color-popover: #1A1A2E;
+  --color-popover-foreground: #FFFFFF;
+
+  --color-primary: #00F5FF;
+  --color-primary-foreground: #0F0F23;
+
+  --color-secondary: #1A1A2E;
+  --color-secondary-foreground: #FFFFFF;
+
+  --color-muted: #16213E;
+  --color-muted-foreground: #B8BCC8;
+
+  --color-accent: #00F5FF;
+  --color-accent-foreground: #0F0F23;
+
+  --color-destructive: #FF073A;
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-border: #334155;
+  --color-input: #334155;
+  --color-ring: #00F5FF;
+
+  --color-chart-1: #00F5FF;
+  --color-chart-2: #FF073A;
+  --color-chart-3: #1A1A2E;
+  --color-chart-4: #B8BCC8;
+  --color-chart-5: #334155;
+
+  --color-sidebar: #1A1A2E;
+  --color-sidebar-foreground: #B8BCC8;
+  --color-sidebar-primary: #00F5FF;
+  --color-sidebar-primary-foreground: #0F0F23;
+  --color-sidebar-accent: #16213E;
+  --color-sidebar-accent-foreground: #FFFFFF;
+  --color-sidebar-border: #334155;
+  --color-sidebar-ring: #00F5FF;
+
+  --color-surface-primary: #0F0F23;
+  --color-surface-secondary: #1A1A2E;
+  --color-surface-elevated: #16213E;
+  --color-accent-neon: #00F5FF;
+  --color-accent-electric: #FF073A;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B8BCC8;
+
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+}
+
+@layer base {
+  :root {
+    --background: #0F0F23;
+    --foreground: #FFFFFF;
+    --card: #1A1A2E;
+    --card-foreground: #FFFFFF;
+    --popover: #1A1A2E;
+    --popover-foreground: #FFFFFF;
+    --primary: #00F5FF;
+    --primary-foreground: #0F0F23;
+    --secondary: #1A1A2E;
+    --secondary-foreground: #FFFFFF;
+    --muted: #16213E;
+    --muted-foreground: #B8BCC8;
+    --accent: #00F5FF;
+    --accent-foreground: #0F0F23;
+    --destructive: #FF073A;
+    --destructive-foreground: #FFFFFF;
+    --border: #334155;
+    --input: #334155;
+    --ring: #00F5FF;
+    --chart-1: #00F5FF;
+    --chart-2: #FF073A;
+    --chart-3: #1A1A2E;
+    --chart-4: #B8BCC8;
+    --chart-5: #334155;
+    --radius: 0.5rem;
+    --sidebar-background: #1A1A2E;
+    --sidebar-foreground: #B8BCC8;
+    --sidebar-primary: #00F5FF;
+    --sidebar-primary-foreground: #0F0F23;
+    --sidebar-accent: #16213E;
+    --sidebar-accent-foreground: #FFFFFF;
+    --sidebar-border: #334155;
+    --sidebar-ring: #00F5FF;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-surface-primary);
+  }
+
+  body {
+    background: var(--color-surface-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    letter-spacing: -0.025em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+  }
+
+  .container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
